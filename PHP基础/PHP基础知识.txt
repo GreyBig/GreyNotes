@@ -1,0 +1,22 @@
+可变变量在前面加$$ 
+这是可变变量的写法，比如
+$first ="hello";
+$hello ="world";
+echo $first." ".$$first;
+结果是  hello world
+
+在自定义函数内调用在函数外部定义的变量，需要使用global关键字。
+
+$a++等价于$a=$a+1
+
+php常量是可以用define()函数来定义常量。一个常量一旦被定义，就不能再改变或者取消定义。
+
+cookie最大长度是4KB
+
+trim() 函数移除字符串两侧的空白字符或其他预定义字符。
+
+函数var_dump的意义是输出变量的相关信息。
+
+date函数不能返回UNIX时间戳
+
+date_default_timezone_set("PRC");

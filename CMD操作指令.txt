@@ -1,0 +1,14 @@
+ipconfig 查看计算机地址
+ipconfig /all 还可以查看到物理地址（MAC地址)
+
+php -v 查看php版本
+php -m 查看扩展
+
+arp -a 把IP地址翻译成物理地址（网卡地址）
+同一个局域网中要使用物理地址传输信息
+
+netstat -a -n -o 查看端口占用情况
+
+cls 清除屏幕
+
+PHP运行指定文件php -f test.php (-f 可省略)

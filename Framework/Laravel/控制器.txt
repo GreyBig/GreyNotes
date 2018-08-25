@@ -1,0 +1,23 @@
+﻿
+创建控制器 php artisan make:controller PostController
+
+访问控制器，和路由进行关联
+
+两种方法关联路由
+Route::get('member/info','MemberController@info');       也可加命名空间\App\Http\Controllers\
+Route::get('member/info'['uses' => 'MemberController']);
+访问MemberController控制器的info方法
+
+参数绑定 并使用 where做限定
+Route::get('member/{id}','MemberController@info')->where('id', '[0-9]+'); ; 
+
+class MemberController extends Controller
+{
+    public function info($id)
+    {
+    	return 'member-info-id-' . $id;
+    }
+}
+   
+http://www.test.com/laravel54/public/member/2
+member-info-id-2

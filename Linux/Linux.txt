@@ -1,0 +1,88 @@
+
+Linux 中一切皆文件
+
+格式化的目的是为了写入文件系统
+
+CentOS 6.x的默认文件系统类型是ext4
+
+Linux安装时至少划分根分区/和SWAP分区才能正常安装使用
+
+# cp build.php application/   复制build.php 到application下
+# cp -r css image js /mamp    复制多个文件到mamp目录下
+# sudo  以其他身份来执行命令，预设身份root。在/etc/sudoers中设置了可执行sudo指令的用户。
+# mkdir 创建目录
+# touch 创建文件
+# rm -rf    删除文件或目录
+# date 查看时间（不一定准）
+& 放在命令后面，表示后台执行
+# shotdown -r [时间] 重启命令
+# runlevel 查询系统运行级别
+# logout 退出登陆命令
+# cat只查看文件里面的内容
+# rm -rf tmp/ 删除tmp下面所有的目录
+# cp -rf 
+# ps aux | grep xxx    查看进程,输入对应的进程ID就可查看（进程ID lnmp status可查看）
+
+
+yum install tree -y 可以安装tree命令
+tree 7zu/ 可以查看这个7zu目录的树状结构
+
+命令
+lnmp 查看lnmp安装好没
+lnmp status 查看lnmp有没有跑
+lnmp restart 如果有没跑的，可以用这个命令重启服务
+
+大写X一般是图形界面
+
+ifconfig -a 可以查看当前网卡配置
+
+# weget 下载文件
+从网络下载一个文件并保存在当前目录 
+wget http://cn.wordpress.org/wordpress-3.1-zh_CN.zip 
+
+首先按ESC键回到命令模式，然后输入:w保存即可，也可以输入:wq!保存文件并退出。
+以下是保存命令：
+:w   保存文件但不退出vi 
+:w file 将修改另外保存到file中，不退出vi 
+:w!  强制保存，不推出vi
+:wq  保存文件并退出vi 
+:wq! 强制保存文件，并退出vi
+:q 不保存文件，退出vi
+:q!不保存文件，强制退出vi 
+:e! 放弃所有修改，从上次保存文件开始再编辑
+
+startx 可以进入桌面模式
+
+命令模式下，输入 /word 后回车，即查找word，
+按 n 查找下一个匹配单词，按 N 查找上一个匹配单词
+
+su root(root账户登陆)
+
+shutdown命令安全地将系统关机
+
+# tar -zcvf jp.tar.gz  jp  	压缩
+# tar -zxvf jp.tar.gz		解压缩
+
+# tar -jcvf jp.tar.bz2 jp  	压缩
+# tar -jxvf jp.tar.bz2		解压缩
+
+
+方法一：留意借口，欺骗大脑【再做15分钟】（00:44）
+方法二：坚守目标底线，【多了我不做】（02:14）
+方法三：不要等待【好状态】永远不会到来（04:02）
+方法四：日常自虐，什么难能做什么（05:30）
+方法五：完美主义是种病，做完比做好更重要（06:43）
+
+Linux命令中并没有这几项，而是存在于vi和vim等编辑器中，详情如下：
+q：退出
+wq：修改后保存退出
+q！：强制退出，不保存修改的内容
+
+cp -r 文件 路径
+在Linux中就可以吧文件复制到指定路径
+
+netstat -tpnlu 查看端口进程
+
+只读文件保存w !sudo tee %
+
+Tab可以补全命令或在输入命令时查看目录下的文件

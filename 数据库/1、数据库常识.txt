@@ -1,0 +1,5 @@
+MySQL、Oracle、SQLServer、PgSql
+
+NoSQL系统：Mongo、Memcache、Redis
+
+数据库管理员（Database Administrator，简称DBA）

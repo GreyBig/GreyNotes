@@ -1,0 +1,36 @@
+Laravel中提供DB facade(原始查找)、查询构造器和Eloquent ORM三种操作数据库方式
+
+database中 prefix中加表前缀
+
+.env中设置数据库
+
+
+使用DB facade实现CURD什么意思？它代表数据库的创建（Create）、更新（Update）、读取（Retrieve）和删除（Delete）操作。
+
+第一步：写个路由 创建个Student表
+Route::any('test1', 'StudentController@test1');
+
+
+第二步：控制器里面 进行CURD
+class StudentController extends Controller
+{
+    public function test1()
+    {
+    	// 新增
+    	// $bool = DB::insert('insert into student(name, age) values(?, ?)',
+    	// 	['grey', 19]);
+
+    	// 更新
+    	// $num = DB::update('update student set age = ? where name = ?',
+    	// 	[20, 'sean']);
+    	// var_dump($num);
+
+    	// 查询
+    	// $students = DB::select('select * from student');
+    	// dd($students);
+
+    	// 删除
+    	// $num = DB::delete('delete from student where id > ?', [1]);
+    	// var_dump($num);
+    }
+}

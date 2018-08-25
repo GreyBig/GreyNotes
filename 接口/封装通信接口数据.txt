@@ -1,0 +1,13 @@
+方法：
+PHP生成JSON数据
+方法：json_encode($value)
+注：该函数只能接收UTF-8编码的数据
+
+iconv('UTF-8',GBK',$data);
+此函数可以讲UTF-8转化为GBK
+
+
+通信数据标准格式
+code 	状态码(200,400)
+message 提示信息(邮件格式不正确;数据返回成功等)
+data	返回数据

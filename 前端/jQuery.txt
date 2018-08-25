@@ -1,0 +1,55 @@
+基础语法: $(selector).action()
+
+    美元符号定义 jQuery
+    选择符（selector）“查询”和“查找” HTML 元素
+    jQuery 的 action() 执行对元素的操作
+
+
+文档就绪函数:
+$(document).ready(function(){
+
+--- jQuery functions go here ----
+
+});
+
+
+常用选择器
+语法：			描述：
+$(this) 		当前 HTML 元素
+$("p") 			所有 <p> 元素
+$("p.intro") 		所有 class="intro" 的 <p> 元素
+$(".intro") 		所有 class="intro" 的元素
+$("#intro") 		id="intro" 的第一个元素
+$("ul li:first") 	每个 <ul> 的第一个 <li> 元素
+$("[href$='.jpg']") 	所有带有以 ".jpg" 结尾的属性值的 href 属性
+$("div#intro .head") 	id="intro" 的 <div> 元素中的所有 class="head" 的元素
+
+
+jQuery 常用事件
+
+下面是 jQuery 中事件方法的一些例子：
+Event 函数：				绑定函数至：
+$(document).ready(function) 		将函数绑定到文档的就绪事件（当文档完成加载时）
+$(selector).click(function) 		触发或将函数绑定到被选元素的点击事件
+$(selector).dblclick(function) 		触发或将函数绑定到被选元素的双击事件
+$(selector).focus(function) 		触发或将函数绑定到被选元素的获得焦点事件
+$(selector).mouseover(function) 	触发或将函数绑定到被选元素的鼠标悬停事件
+
+
+jQuery 效果函数
+方法： 				描述：
+$(selector).hide() 		隐藏被选元素
+$(selector).show() 		显示被选元素
+$(selector).toggle() 		切换（在隐藏与显示之间）被选元素
+$(selector).slideDown() 	向下滑动（显示）被选元素
+$(selector).slideUp() 		向上滑动（隐藏）被选元素
+$(selector).slideToggle() 	对被选元素切换向上滑动和向下滑动
+$(selector).fadeIn() 		淡入被选元素
+$(selector).fadeOut() 		淡出被选元素
+$(selector).fadeTo() 		把被选元素淡出为给定的不透明度
+$(selector).animate() 		对被选元素执行自定义动画
+
+Callback 函数在当前动画 100% 完成之后执行。
+$("p").hide(1000,function(){
+alert("The paragraph is now hidden");
+});  //hide完成后才会执行alert,alert是弹出框

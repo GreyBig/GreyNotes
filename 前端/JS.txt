@@ -1,0 +1,20 @@
+页面显示初始化的js必须放在head里面
+
+console.log方法： 方便你调式javascript 可以看到页面中输出的内容。类似于alert，不过不会打断操作
+
+“white-space:pre;” 样式属性可以保留空格
+
+document.write() 可用于直接向 HTML 输出流写内容
+
+alert 消息对话框   	confirm 消息对话框
+
+prompt(str1, str2);
+参数说明：
+str1: 要显示在消息对话框中的文本，不可修改
+str2：文本框中的内容，可以修改
+
+window.open([URL], [窗口名称], [参数字符串])
+window.close();    //关闭本窗口
+
+
+123e5是科学计数，结果为12300000

@@ -1,0 +1,17 @@
+查看所有可用的Artisan的命令
+php artisan 
+php artisan list
+
+查看命令的帮助信息
+php artisan help migrate
+
+Artisan基本使用
+创建控制器
+php artisan make:controller StudentController
+创建模型
+php artisan make:model Student
+创建中间件
+php artisan make:middleware Activity
+
+生成Auth
+php artisan make:auth

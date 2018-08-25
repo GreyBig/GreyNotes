@@ -1,0 +1,11 @@
+CSS : 
+body{font:12px/1.5 Tahoma;} 字体12像素 行高 1.5em 字体 Tahoma
+code,input,button{font-family: inherit;}   继承父元素的值
+button{cursor:pointer;}   光标呈现手的形状，有其它参数(其它效果)
+
+window.onload
+等待html文档加载完毕后就执行..
+例如我们要初始化一些东西..比如说我们要把文档中的div的颜色都改变了
+那么在文档加载完毕后 在这个onload调用的函数里面我们就可以操作文档结构了..
+如果不是在onload 里面调用的话。那么在文档还没有加载完毕 我们就调用文档元素师不可以的...换句话说 东西要先存在 我才拿来用.
+onload就是在文档存在之后所有干的事..

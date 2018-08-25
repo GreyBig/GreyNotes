@@ -1,0 +1,6 @@
+AJAX 用于创造动态性更强的应用程序。
+
+
+AJAX 不是一种新的编程语言，而是一种使用现有标准的新方法。
+AJAX 基于 JavaScript 和 HTTP 请求（HTTP requests）。
+AJAX 是一种用于创建快速动态网页的技术。

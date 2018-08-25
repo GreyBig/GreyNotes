@@ -1,0 +1,16 @@
+<?php      
+function abc($a) //这个$a是形参
+{
+ $a++;
+ echo $a;
+}
+$a=2;
+abc($a); //这个$a是实参 输出：3
+echo $a;  //输出：2 
+//因为传进abc里的是它的一副本 要想在函数内改变该值，可以用引用传递
+function abc(&$a)
+{
+ $a++;
+ echo $a;
+}
+?>     

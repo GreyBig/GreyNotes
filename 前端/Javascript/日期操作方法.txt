@@ -1,0 +1,28 @@
+var a=new Date()
+a
+Wed Jun 06 2018 12:40:27 GMT+0800 (中国标准时间)
+a.getDate()
+6
+
+日期方法：
+getDate() 从Date对象返回一个月中的某一天（1~31）
+getDay() 从Date对象返回一周中的某一天（0~6）
+getMonth() 从Date对象返回月份（0~11）
+getFullYear() 从Date对象以四位数字返回年份
+getHours() 返回Date对象的小时（0~23）
+getMinutes() 返回Date对象的分钟（0~59）
+getSeconds() 返回Date对象的秒数（0~59）
+GetMilliseconds() 返回Date对象的毫秒（0~59）
+setDate() 设置Date对象中月的某一天（1~31）
+setMonth() 设置Date对象中月份（0~11）
+setFullYear() 设置Date对象中的年份（四位数字）
+setTime() 以毫秒设置Date对象
+
+日期格式化方法:
+toString() 把Date对象转换为字符串
+toTimeString() 把Date对象的时间部分转为字符串
+toDateString() 把Date对象的日期部分转为字符串
+toUTCString() 转为世界通用世界
+toLocalTimeString() 根据本地时间格式，把Date对象的时间部分转为字符串
+toLocalDateString() 根据本地时间格式，吧Date对象的日期部分转为字符串
+toLocalString() 根据本地时间格式，吧Date对象转为字符串

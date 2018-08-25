@@ -1,0 +1,47 @@
+iconv('原来的编码方式','需要转换成的编码格式','需要转换的数据');
+
+eval — 把字符串作为PHP代码执行
+
+rmdir 删除当前目录
+
+file() 函数把整个文件读入一个数组中。
+
+fopen() 20:01 2018/4/14 星期六
+
+输出字符串可以应用函数echo和 var_dump 来输出。
+
+PHP自定义函数的关键字是function
+
+字符函数： 
+	strlen函数 描述：用于获取字符长度 语法：int strlen(string $str)  utf-8的环境下一个汉字的长度是3字节
+	mbstring 测试中文的长度
+	
+	strtolower函数 将字符串转换为小写 string strtolower(string $str)
+	strtoupper函数 将字符串转换为大写 string strtoupper(string $str)
+	ucfitst函数 将句子首字母转换为大写
+	ucwords函数 将每个单词的首字母转换为大写字母
+	str_replace函数 实现字符替换，区分大小写， 三个参数：第一个是被替换的字符，第二个是替换字符，第三是哪里边的。
+	str_ireplace函数 实现字符替换，不区分大小写 
+	htmlspecialchars函数 预定义的字符串转换为HTML实体
+	ltrim函数 rtirm函数 trim函数
+	strpos函数 stripos函数忽略大小写  作用：将返回一个字符串在另一个字符串的第一次出现的位置
+	strrpos函数 strripos函数忽略大小写 作用：将返回一个字符串在另一个字符串最后一次出现的位置
+	substr函数 实现截取字符串
+	
+	
+	file_get_contents() 函数是用来将文件的内容读入到一个字符串
+	file_put_contents() 函数把一个字符串写入文件中。
+	
+	serialize()和 unserialize()
+	所有php里面的值都可以使用函数serialize()来返回一个包含字节流的字符串来表示。
+	unserialize()函数能够重新把字符串变回php原来的值。
+
+	isset函数是检测变量是否设置。
+	若变量不存在则返回 FALSE 
+	若变量存在且其值为NULL，也返回 FALSE 
+	若变量存在且值不为NULL，则返回 TURE 
+	
+	get_class($var) 得到变量的类名
+	
+	file_get_contents 将整个文件读入一个字符串
+	stream_get_contents — 读取资源流到一个字符串

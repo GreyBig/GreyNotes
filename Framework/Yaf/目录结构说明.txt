@@ -1,0 +1,22 @@
+index.php是入口文件
+
+Bootstrap是实际开发时对入口的代码，很多实际功能在这里注册，
+一个请求来的时候就要进入Bootstrap。
+它可以初始化配置、插件、路由、VIEW，也可以在里面自己写插件
+
+
+
+server
+    {
+        listen 80;
+        #listen [::]:80;
+        server_name www.7zu.com 7zu.com;
+        index index.php
+        root  /home/work/7zu;
+
+        include enable-php.conf;
+
+        if (!-e $request_filename) {
+                rewrite ^/(.*) /index.php?$1 last;
+        }
+    }

@@ -1,0 +1,12 @@
+vagrant box list
+vagrant box remove lc/homestead 移除盒子
+vagrant init	初始化 vagrant
+vagrant up	启动 vagrant
+vagrant halt	关闭 vagrant
+vagrant ssh	通过 SSH 登录 vagrant（需要先启动 vagrant）
+vagrant provision	重新应用更改 vagrant 配置
+vagrant destroy	删除 vagrant
+
+
+vagrant provision 是命令 Vagrant 重新加载 Homestead.yaml 配置；
+vagrant reload 是重启虚拟机使更改生效。

@@ -1,0 +1,7 @@
+MyISAM / InnoDB
+
+锁的范围不同： MyISAM是全表锁 InnoDB是行级锁
+
+InnoDB适合在对表操作很频繁的情况下
+
+如用户表 只要不是达到BAT的规模，大多数都是低频的表，最好用MyISAM

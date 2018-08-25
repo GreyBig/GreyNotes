@@ -1,0 +1,30 @@
+phpstudy配置虚拟域名：
+	1,站点域名管理中添加（路径要到public目录）
+	2,host中添加网址
+
+命名：一种是匈牙利命名法user_name  另一种是驼峰命名法
+函数用匈牙利命名法
+类的方法和属性用驼峰法
+魔术方法用双下划线+驼峰命名法 __set(),__callStatic()
+常量用 大写字母+下划线 APP_PATH
+配置参数 小写字母+下划线 url_route_on
+
+application 应用目录（可自定义）
+extent	扩展类库目录（可自定义）
+public	外部可访问的Web目录
+runtime 应用运行时目录
+thinkPHP 框架核心库目录
+vendor	第三方类库目录
+
+build.php 自动生成定义文件（参考）
+composer.json composer定义文件
+LICENSE.txt 版权文件
+README.md 框架说明文件
+think 命令行入口文件
+
+return $this->fetch()这个方法是用于视图的渲染模板输出。
+
+
+自动化模块搭建：
+application/build.php中写好模块后 到根目录执行php think build
+就可生成相应模块

@@ -1,0 +1,30 @@
+indexOf
+与String类似，Array也可以通过indexOf()来搜索一个指定的元素的位置：
+
+slice
+slice()就是对应String的substring()版本，它截取Array的部分元素，然后返回一个新的Array：
+
+push和pop
+push()向Array的末尾添加若干元素，pop()则把Array的最后一个元素删除掉：
+
+unshift和shift
+unshift()向Array的头部添加若干元素，shift()则把Array的一个元素删除掉：
+
+sort
+sort()可以对当前Array进行排序，它会直接修改当前Array的元素位置，直接调用时，按照默认顺序排序：
+
+reverse
+reverse()把整个Array的元素给掉个个，也就是反转：
+
+splice 拼接的意思
+splice()方法是修改Array的“万能方法”，它可以从指定的索引开始删除若干元素，
+然后再从该位置添加若干元素：
+
+concat
+concat()方法把当前的Array和另一个Array连接起来，并返回一个新的Array：
+请注意，concat()方法并没有修改当前Array，而是返回了一个新的Array。
+
+join
+join()方法是一个非常实用的方法，它把当前Array的每个元素都用指定的字符串连接起来，然后返回连接后的字符串：
+var arr = ['A', 'B', 'C', 1, 2, 3];
+arr.join('-'); // 'A-B-C-1-2-3'

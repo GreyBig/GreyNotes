@@ -1,0 +1,40 @@
+﻿JSON: JavaScript Object Notation -> JavaScript 对象表示法
+
+JSON 是存储和交换文本信息的语法。类似 XML。
+
+JSON 比 XML 更小、更快，更易解析。
+
+JSON 是轻量级的文本数据交换格式
+
+PHP生成JSON数据 方法：json_encode($value)
+
+JSON - 转换为 JavaScript 对象:
+JSON 文本格式在语法上与创建 JavaScript 对象的代码相同。
+由于这种相似性，无需解析器，JavaScript 程序能够使用内建的 eval() 函数，用 JSON 数据来生成原生的 JavaScript 对象。
+
+JSON 数据的书写格式是：名称/值对。
+
+JSON 数组在方括号中书写：
+{
+"employees": [
+{ "firstName":"John" , "lastName":"Doe" }, 
+{ "firstName":"Anna" , "lastName":"Smith" }, 
+{ "firstName":"Peter" , "lastName":"Jones" }
+]
+}
+
+JSON 使用 JavaScript 语法, JavaScript，您可以创建一个对象数组，并像这样进行赋值：
+var employees = [
+{ "firstName":"John" , "lastName":"Doe" }, 
+{ "firstName":"Anna" , "lastName":"Smith" }, 
+{ "firstName":"Peter" , "lastName": "Jones" }
+];
+可以像这样访问 JavaScript 对象数组中的第一项：
+
+employees[0].lastName;
+返回的内容是：
+
+Doe
+可以像这样修改数据：
+
+employees[0].firstName = "Jonatan";

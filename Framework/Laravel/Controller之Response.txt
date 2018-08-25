@@ -1,0 +1,23 @@
+响应的常见类型
+
+	字符串
+	视图
+	Json
+	重定向
+
+
+class TestController extends Controller
+{
+        public function response()
+        {
+            // 响应json
+            $data = [
+                'errCode' => 0,
+                'errMsg' => 'success',
+                'data' => 'sean',
+            ];
+            return response()->json($data);
+        }
+
+	 
+}

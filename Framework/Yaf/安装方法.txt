@@ -1,0 +1,43 @@
+
+Windows:
+1. 打开pecl.php.net
+
+2. 搜索 yaf
+
+3. 点击Downloads下的DLL,进入后选择合适的版本
+
+什么是合适的？  打开phpinfo() 查看：Thread Safety为disabled 就选NTS      Architecture为x86 就选x86
+
+将 php_yaf.dll放入php的ext中
+
+
+Linux:
+打开https://pecl.php.net/package/yaf网站 复制yaf-3.0.7.tgz 
+
+进入到 ~ 目录，输入 wegt 'https://pecl.php.net/get/yaf-3.0.7.tgz'
+
+下好后解压 tar zxvf yaf-3.0.7.tgz    之后进入 yaf-3.0.7文件，这里就是yaf源代码
+
+如何编译安装这个扩展呢？ 需要使用phpize，命令行执行phpize，它就会帮我们初始化一个configure文件
+
+命令行输入  ./configure --with-php-config=/usr/local/php/bin/php-config   准备编译前的一些信息
+
+之后有了Makefile, 命令行输入make就开始编译
+
+输入make test 如果报错说proc_open()被禁用 不必在意
+
+find ./ -name 'yaf.so'  发现在moudles和libs，  yaf.so就是php的扩展，php的扩展在Linux都是.so结尾的。
+
+输入make install 安装扩展， ls加扩展安装路径可查看还有哪些扩展
+
+编辑vim /usr/local/php/etc/php.ini
+[Yaf]
+extension=yaf.so
+yaf.environ="product"  (可要可不要）
+
+随后 lnmp restart , 会发现php-fpm扩展安装完毕
+
+
+
+
+注：/usr/local/nginx/conf/nginx.conf 查找server_name

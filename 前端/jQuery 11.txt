@@ -1,0 +1,36 @@
+jQuery 库包含以下特性：
+
+    HTML 元素选取
+    HTML 元素操作
+    CSS 操作
+    HTML 事件函数
+    JavaScript 特效和动画
+    HTML DOM 遍历和修改
+    AJAX
+    Utilities
+
+
+添加 jQuery 库到网页中：
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+</head>
+
+
+
+下载 jQuery
+共有两个版本的 jQuery 可供下载：一份是精简过的，另一份是未压缩的（供调试或阅读）。
+这两个版本都可从 jQuery.com 下载。
+下载好后在src中写好路径就可以是用来了
+
+
+使用 Google 的 CDN
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs
+/jquery/1.4.0/jquery.min.js"></script>
+</head>
+
+使用 Microsoft 的 CDN
+<head>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.4.min.js"></script>
+</head>

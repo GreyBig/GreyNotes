@@ -1,0 +1,69 @@
+
+Get方法：
+class UrlController extends Yaf_Controller_Abstract {
+    public function getAction() {
+        $url = $this->getRequest()->getQuery("url", "0");
+    		            echo json_encode( array(
+        	                    "errno"=>0,
+                	            "errmsg"=>"",
+                        	    "data"=>array("url"=>$url)
+	                        ));
+    }
+
+
+更多方法：
+http://www.zixuephp.net/article-392.html
+
+
+
+Post方法
+class UrlController extends Yaf_Controller_Abstract {
+    public function getAction() {
+        $url = $this->getRequest()->getPost("url", false);
+                            echo json_encode( array(
+                                    "errno"=>0,
+                                    "errmsg"=>"",
+                                    "data"=>array("url"=>$url)
+                                ));
+        return false;
+    }
+}
+
+class UrlController extends Yaf_Controller_Abstract {
+    public function getAction() {
+        $url = $this->getRequest()->getPost("url", false);
+
+        $pattern="/(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\S*)?/";
+
+        if(preg_match($pattern,$url)){
+                echo json_encode( array(
+                             "errno"=>0,
+                             "errmsg"=>"",
+                             "data"=>array("url"=>$url)
+                        ));
+        }else{
+                echo json_encode( array("errno"=>-1010, "errmsg"=>"请输入网址") );
+        {
+        return false;
+    }
+
+}
+
+class UrlController extends Yaf_Controller_Abstract {
+    public function getAction() {
+        $url = $this->getRequest()->getPost("url", false);
+
+        if (preg_match('/^(http|https|ftp)://([A-Z0-9][A-Z0-9_-]*(?:.[A-Z0-9][A-Z0-9_-]*)+):?(d+)?/?/i', $url)) {
+                echo json_encode( array(
+                             "errno"=>0,
+                             "errmsg"=>"",
+                             "data"=>array("url"=>$url)
+                        ));;
+        } else {
+                echo json_encode( array("errno"=>-1010, "errmsg"=>"请输入网址") );
+        }
+        return false;
+    }
+
+}
+

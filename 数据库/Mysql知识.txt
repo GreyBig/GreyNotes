@@ -1,0 +1,42 @@
+Windows终端进入Mysql要再bin目录下才行
+
+source table.sql 可在命令行插入表
+
+操作:
+show databases;					显示你有的数据库
+CREATE DATABASE database_name			创建数据库
+SELECT 列名称 FROM 表名称
+SELECT * FROM 表名称 
+SELECT DISTINCT 列名称 FROM 表名称 		DISTINCT可以去掉重复值
+SELECT * FROM Persons WHERE City='Beijing'	只选取居住在城市 "Beijing" 中的人
+
+使用 AND 来显示所有姓为 "Carter" 并且名为 "Thomas" 的人：
+SELECT * FROM Persons WHERE FirstName='Thomas' AND LastName='Carter'
+使用 OR 来显示所有姓为 "Carter" 或者名为 "Thomas" 的人：
+SELECT * FROM Persons WHERE firstname='Thomas' OR lastname='Carter'
+我们也可以把 AND 和 OR 结合起来（使用圆括号来组成复杂的表达式）:
+SELECT * FROM Persons WHERE (FirstName='Thomas' OR FirstName='William') AND LastName='Carter'
+
+以字母顺序显示公司名称（Company），并以数字顺序显示顺序号（OrderNumber）：
+SELECT Company, OrderNumber FROM Orders ORDER BY Company, OrderNumber
+以逆字母顺序显示公司名称：
+SELECT Company, OrderNumber FROM Orders ORDER BY Company DESC
+以逆字母顺序显示公司名称，并以数字顺序显示顺序号：
+SELECT Company, OrderNumber FROM Orders ORDER BY Company DESC, OrderNumber ASC
+
+在指定的列中插入数据
+INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
+INSERT INTO Persons (LastName, Address) VALUES ('Wilson', 'Champs-Elysees')
+
+Update 语句用于修改表中的数据。
+UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值
+UPDATE Person SET FirstName = 'Fred' WHERE LastName = 'Wilson' 
+
+DELETE 语句用于删除表中的行。
+DELETE FROM 表名称 WHERE 列名称 = 值
+
+可以在不删除表的情况下删除所有的行。这意味着表的结构、属性和索引都是完整的：
+DELETE FROM table_name
+
+更新
+`update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT 'information change time',

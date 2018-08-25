@@ -1,0 +1,51 @@
+﻿简单的说就是将用户的请求转发给相应的程序进行处理
+
+作用就是建立url和程序之间的映射
+
+请求类型 get、post、put、patch、delete
+
+Route::get('basic1',function(){
+	return 'Hello World';
+});
+
+访问http://www.test.com/laravel54/public/basic1 就显示Hello World
+
+
+多请求路由：
+
+Route::match(['get','post'],'multy1',function(){
+	return 'multy1';
+});
+访问http://www.test.com/laravel54/public/basic1
+
+Route::any('multy2',function() {
+	return 'multy2';
+});
+
+any所有类型请求 match指定请求
+
+路由参数
+
+Route::get('user/{id}', function($id) {
+	return 'User-' . $id;
+});
+http://www.test.com/laravel54/public/user/8
+User-8
+
+也可以设置默认参数： 这里默认参数为sean
+Route::get('user/{name?}', function($name = 'sean') {
+	return 'User-name-' . $name;
+});
+
+还可以使用->where来指定参数范围
+
+路由别名 as
+
+路由群组 group
+
+路由中输出视图
+Route::get('/', function () {
+    return view('welcome');
+});
+// 这里返回的是 resources/
+http://www.test.com/laravel54/public/view 

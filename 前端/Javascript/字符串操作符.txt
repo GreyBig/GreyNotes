@@ -1,0 +1,53 @@
+变量声明时要用var操作符
+var x; 一个变量声明
+var y,z; 两个变量声明
+		
+F12在控制台中测试代码
+
+typeof x 可以检测x是什么数据类型
+
+
+字符串操作方法：
+
+charAt() 该方法返回指定位置的字符
+	var a="hello php.cn"
+	undefined
+	a.charAt(4)
+	"o"
+	
+indexOf() 该方法返回某个指定字符串值在字符串中首次出现的位置，对大小写敏感，第二个参数决定从哪个位置开始检索
+
+replace() 该方法用于在字符串中用一些字符替换另一些字符（或替换一个与正则表达式匹配的字串）
+	var a="hello php.cn"
+	a.replace(/hello/,"你好")
+	"你好 php.cn"
+	
+concat() 该方法用于连接连个或多个字符串
+	var a="hello php.cn"
+	var b="你好",c="我是小师太"
+	a.concat(b)
+	"hello php.cn你好"
+	a.concat(b,c)
+	"hello php.cn你好我是小师太"
+	
+substr(start,length) 可在字符串中抽取从start开始的指定书目的字符（可以用负值）
+	var a="hello php.cn"
+	undefined
+	a.substr(3)
+	"lo php.cn"
+	a.substr(3,4)
+	"lo p"
+
+substring(start,stop) 用于提取字符串中介于两个指定下标之间的字符
+	var a="hello php.cn"
+	undefined
+	a.substring(3)
+	"lo php.cn"
+	a.substring(3,7)
+	"lo p"
+
+length 可以查看字符串长度
+var a="hello"
+undefined
+a.length
+5

@@ -1,0 +1,32 @@
+背景颜色 <p style="background-color:green">This is a paragraph.</p>
+style 属性淘汰了“旧的” bgcolor 属性。
+
+字体、颜色和尺寸 <p style="font-family:arial;color:red;font-size:20px;">A paragraph.</p>
+style 属性淘汰了旧的 <font> 标签。
+
+text-align 属性规定了元素中文本的水平对齐方式：
+<h1 style="text-align:center">This is a heading</h1>
+style 属性淘汰了旧的 "align" 属性。
+
+水平线： <hr />
+折行:  <br />
+
+注释： <!--这是一段注释。注释不会在浏览器中显示。-->
+
+HTML 链接是通过 <a> 标签进行定义的。
+<a href="http://www.w3school.com.cn">This is a link</a>
+
+HTML 图像是通过 <img> 标签进行定义的。
+<img src="w3school.jpg" width="104" height="142" />
+
+<b>定义粗体文本。   <big>定义大号字。
+<em>定义着重文字。   <i>定义斜体字。
+<small>定义小号字。  <strong>定义加重语气。
+<sub>定义下标字。    <sup>定义上标字。
+<ins>定义插入字。    <del>定义删除字。
+
+1、./是当前目录
+
+2、../是父级目录
+
+3、/是根目录

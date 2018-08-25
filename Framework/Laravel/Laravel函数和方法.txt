@@ -1,0 +1,11 @@
+函数：
+intersect() 它是Collection里面的函数
+作用：使两个Collection产生交集
+
+
+方法：
+detach() 分离两者的关系，如分离用户和角色的关联
+
+withPivot([ ]) 取出关联表中的字段，[]中写需要取出的字段
+
+contains() 判断一个集合是否有某一个对象

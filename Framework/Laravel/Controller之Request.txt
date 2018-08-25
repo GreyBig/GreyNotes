@@ -1,0 +1,43 @@
+获取请求中的值
+
+判断请求的类型
+
+
+    public function request1(Request $request)
+    {
+        // 1.取值
+        // echo $request->input('name');
+        // echo $request->input('sex','未知'); //第二个参数是默认值，当没有值的时候出现
+        
+        // 查询是否有该参数
+/*        if ($request->has('name')) {
+            echo $request->input('name');
+        } else {
+            echo '无该参数';
+        }*/
+        
+/*      //获取所有请求
+        $res= $request->all();
+        dd($res);*/
+
+        // 2. 判断请求类型
+        // echo $request->method();
+        
+/*        if ($request->isMethod('GET')){
+            echo 'yes';
+        }else{
+            echo 'no';
+        }*/
+    
+/*      // 判断是不是ajax请求
+        $res = $request->ajax();
+        var_dump($res);*/
+        
+/*      // 判断路径是不是符合特定的格式
+        $res = $request->is('student/*');
+        var_dump($res);*/
+
+        // 获取当前的url
+        // echo $request->url();
+        
+    }

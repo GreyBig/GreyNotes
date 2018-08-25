@@ -1,0 +1,11 @@
+接口地址：(http://app.com/api.php?format=xml)
+接口文件：(api.php 处理一些业务逻辑)
+接口数据：返回给客户端的数据
+
+C/S模式：是客户端/服务器(Client/Server)模式
+
+B/S模式：是浏览器/服务器(Browser/Server)模式
+
+区别：
+1、B/S向服务器发送的地址是可见的，C/S不可见（地址是封装在APP里面的）
+2、B/S返回的是HTML格式，而C/S返回的是XML或JSON数据格式

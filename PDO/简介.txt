@@ -1,0 +1,7 @@
+PDO(PHP Data Object),数据库访问抽象层,统一各种数据库的访问接口
+
+如何配置pdo：php配置文件 php.ini中
+打开：
+extension=php_pdo.dll
+extension=php_pdo_mysql.dll(以mysal为例子 举个栗子！
+)然后就可以在phpinfo中看到拉！

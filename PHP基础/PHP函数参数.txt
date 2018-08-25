@@ -1,0 +1,5 @@
+形参和实参
+function show_args($a,$b){ //形参
+	echo $, " ",$b,"\n";
+}
+show_args(1,2) //实参

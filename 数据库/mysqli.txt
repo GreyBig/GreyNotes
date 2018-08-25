@@ -1,0 +1,6 @@
+mysqli_connect连接数据库
+
+if(!$this->link)
+        {
+            die("链接失败:".mysqli_connect_error()); //如果连接失败就报错
+        }

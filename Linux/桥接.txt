@@ -1,0 +1,2 @@
+开启桥接设置后
+systemctl stop firewalld 关闭防火墙就行了

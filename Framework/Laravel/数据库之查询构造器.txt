@@ -1,0 +1,53 @@
+查询构造器简介
+Laravel查询构造器(query builder)提供方便、流畅的接口，用来建立及执行数据库查找语法
+使用PDO参数绑定，以保护应用程序免于SQL注入因此传入的参数不需要额外转移特殊字符
+基本可以满足所有的数据库操作，而且在所有支持的数据库系统上都可以执行
+
+Route::any('query1', 'StudentController@query1');
+
+    public function query1()
+    {	
+
+    	// 插入数据
+    	// $bool = DB::table('student')->insert(
+    	// 	['name' => 'imooc', 'age' => 18]
+    	// );
+    	// var_dump($bool);
+
+    	// 插入数据并打印自增id
+    	// $id = DB::table('student')->insertGetId(
+    	// 	['name' => 'sean', 'age' => 18]
+    	// );
+    	// var_dump($id);
+
+    	// 一次插入多条数据
+    	// $bool = DB::table('student')->insert([
+    	// 	['name' => 'name1', 'age' => 20],
+    	// 	['name' => 'name2', 'age' => 21],
+
+    	// ]);
+    	// var_dump($bool);
+
+    	// 更新数据 要带条件
+    	// $num = DB::table('student')
+    	// 		->where('id', 5)
+    	// 		->update(['age' =>30]);
+    	// var_dump($num);
+
+    	// 自增自减字段
+    	// $num = DB::TABLE('STUDENT')->increment('age'); //age字段增加1
+    	// $num = DB::TABLE('STUDENT')->increment('age',3); //age增加3
+    	// $num = DB::TABLE('STUDENT')->decrement('age');
+    	// $num = DB::TABLE('STUDENT')->decrement('age',3,['name' =>'iimooc']);//自减的同时把name改为imooc
+    	// $num = DB::TABLE('STUDENT')
+    	// 		->where('id', 12) // 指定id为12的自增3
+    	// 		->increment('age',3);
+		
+		// 删除数据
+    	// $num = DB::table('student')
+    	// 		->where('id', '>=', 10) // 删除id大于等于10的数据
+    	// 		->delete();
+
+    	// 清空数据表，谨慎使用
+    	// DB::table('student')->truncate(); 
+    }

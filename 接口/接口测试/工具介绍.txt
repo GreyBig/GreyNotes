@@ -1,0 +1,19 @@
+抓包工具： 
+	httpwatch
+	wireshark
+	fiddler
+fiddler是抓包工具的不二选择，它还有其他功能
+
+
+接口测试工具
+	loadrunner
+	fiddler
+	soapui
+	Jmeter
+	postman
+
+
+三剑客：
+	一、Fiddler：
+		它是一个抓http请求的工具
+		工具原理就是在服务器和客户端中间设置一个代理，每次请求和响应都要经过它

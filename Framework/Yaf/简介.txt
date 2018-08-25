@@ -1,0 +1,8 @@
+简洁
+精简
+
+http://www.laruence.com
+
+
+Github的yaf中找到tools/cg 执行命令 php yaf_cg Sample就可以创建最简单的项目
+https://github.com/laruence/yaf

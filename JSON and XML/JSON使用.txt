@@ -1,0 +1,13 @@
+创建包含 JSON 语法的 JavaScript 字符串：
+
+var txt = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+由于 JSON 语法是 JavaScript 语法的子集，JavaScript 函数 eval() 可用于将 JSON 文本转换为 JavaScript 对象。
+
+eval() 函数使用的是 JavaScript 编译器，可解析 JSON 文本，然后生成 JavaScript 对象。
+必须把文本包围在括号中，这样才能避免语法错误：
+
+var obj = eval ("(" + txt + ")");

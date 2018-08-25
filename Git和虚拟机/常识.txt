@@ -1,0 +1,2 @@
+id_rsa ¡ª¡ª SSH ÃØÔ¿µÄ Ë½Ô¿ (Private Key)
+id_rsa.pub ¡ª¡ª SSH ÃØÔ¿µÄ ¹«Ô¿ (Public Key)

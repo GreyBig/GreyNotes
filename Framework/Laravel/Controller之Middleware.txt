@@ -1,0 +1,91 @@
+中间件有什么作用？
+
+	Laravel中间件提供一个方便的机制来过滤进入应用程序的HTTP请求
+
+
+场景
+	有一个活动，在指定日期后开始，如果活动没开始只能访问宣传页面
+	新建中间件
+	注册中间件
+	使用中间件
+	中间件的前置和后置操作
+
+
+第一步 写路由和方法
+Route::any('activity0',['uses' =>'TestController@activity0']);
+Route::any('activity1',['uses' =>'TestController@activity1']);
+Route::any('activity2',['uses' =>'TestController@activity2']);
+        // 活动的宣传页面
+        public function activity0()
+        {
+            return '活动快要开始啦，敬请期待';
+        }
+    
+        // 活动的宣传页面
+        public function activity1()
+        {
+            return '互动进行中，谢谢您的参与1';
+        }
+        
+        // 活动的宣传页面
+        public function activity2()
+        {
+            return '互动进行中，谢谢你爹参与2';
+        }
+ 
+第二步 新建中间件 ： Middleware中新建一个Activity中间件
+<?php
+
+namespace App\http\Middleware;
+
+use Closure;
+
+class Activity
+{
+    public function handle($request, Closure $next )
+    {
+        if (time()<strtotime('2016-06-05')){
+            return redirect('activity0');
+        }
+        
+        return $next($request);
+    }
+}
+
+
+第三步 Kernel.php中注册中间件 写在protected $routeMiddleware = [...];中 
+
+
+第四步 使用中间件
+//宣传页面
+Route::any('activity0',['uses' =>'TestController@activity0']);
+
+//活动页面
+Route::group(['middleware' => ['activity']], function() {
+    Route::any('activity1',['uses' =>'TestController@activity1']);
+    Route::any('activity2',['uses' =>'TestController@activity2']);
+});
+
+
+
+如何区分中间件的前置和后置操作？
+	逻辑在请求执行前执行就是前置，在请求执行后执行就是后置
+class Activity
+{
+    public function handle($request, Closure $next )
+    {
+        //前置
+        if (time()<strtotime('2018-06-20')){
+            return redirect('activity0');
+        }
+        return $next($request);
+    }
+    
+    public function handle($request, Closure $next )
+    {
+        //后置
+        $response = $next($request);
+        // 逻辑
+        echo '我是后置操作';
+    }
+}

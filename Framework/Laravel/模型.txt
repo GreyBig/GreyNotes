@@ -1,0 +1,26 @@
+模型在 app目录下
+
+创建模型 php artisan make:model Member
+
+写个方法:
+class Member extends Model
+{
+    public static function getMember()
+    {
+    	return 'memeber name is sean';
+    }
+}
+
+
+如何调用？
+控制器里面调用：
+
+use App\Member;
+class MemberController extends Controller
+{
+    public function info($id)
+    {
+    	return Member::getMember();
+    }
+}
+// 调用Member模型中的getMember方法

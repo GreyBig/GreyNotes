@@ -1,0 +1,46 @@
+i进入 Insert 模式
+
+ESC回到Normal模式
+
+vim /usr/local/php/ 
+如果直接按回车会进入编辑页面，如果要查看/usr/local/php/下的目录有哪些，按Tab键
+
+首先按ESC键回到命令模式，然后输入:w保存即可，也可以输入:wq!保存文件并退出。
+以下是保存命令：
+:w   保存文件但不退出vi 
+:w file 将修改另外保存到file中，不退出vi 
+:w!  强制保存，不推出vi
+:wq  保存文件并退出vi 
+:wq! 强制保存文件，并退出vi
+:q 不保存文件，退出vi
+:q!不保存文件，强制退出vi 
+:e! 放弃所有修改，从上次保存文件开始再编辑
+
+
+Normal模式
+u 返回上一步
+
+
+        // 获取参数
+        $unname = $this->getRequest()->getPost( "uname", false );
+        $pwd = $this->getRequest()->getPost( "pwd", false );
+        if( !$uname || !$pwd ) {
+            echo json_encode( array("errno"=>-1002, "errmsg"=>"用户名与密码必须传递") );
+            return FALSE;
+        }
+
+        // 调用Model，做登录验证
+        $model = new UserModel();
+        if ($model->register(trim($uname), trim($pwd) ) ) {
+            echo json_encode( array(
+                            "errno"=>0,
+                            "errmsg"=>"",
+                            "data"=>array("name"=>$uname)
+                        ));
+        } else {
+                echo json_encode( array(
+                        "errno"=>$model->errno,
+                        "errmsg"=>$model->errmsg,
+                     ));
+        }
+        return TRUE;

@@ -1,0 +1,9 @@
+﻿查看PHP是否有这些扩展：PDO pdomysql tokenizer xml
+
+命令行安装：composer create-project laravel/laravel laravel55 "5.5.*"
+
+’admin_users' 对应的Model为AdminUser, 这是Laravel的规范
+
+IoC（Inversion of Control）译为 「控制反转」，也被叫做「依赖注入」(DI)。
+
+Laravel中所以开源项目都是ServiceProvider提供服务的

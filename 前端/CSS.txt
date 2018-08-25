@@ -1,0 +1,11 @@
+内联：<span style="color:red;font-size:10px;" >text</span>
+
+嵌入：<style type="text/css">span{color:red;font-size:10px;}</style>
+
+外部：<link href="style.css" rel="stylesheet" type="text/css">
+
+类选择器， .class{}，在标签内定义class=""，属图形结构。
+ID选择器，#ID{}, 在标签内定义id=""，有严格的一一对应关系。
+子选择器， .span>li{}，作用于父元素span类下一层的li标签。
+包含选择器，.span li{}，作用于父元素span下所有li标签。
+通用选择器，*{}，匹配所有html的标签元素。

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI指数</title>
+	<script type="text/javascript">
+	var height = parseFloat(prompt('请输入身高(m):'));
+	var weight = parseFloat(prompt('请输入体重(kg):'));
+
+	var bmi = parseInt(weight/(height*height));
+	console.log(bmi)
+	if (18.5 >= bmi){
+	    alert(`BMI指数是${bmi}，过轻`);
+	}else if (18.5 < bmi && bmi <= 25){
+	    alert(`BMI指数是${bmi},正常`);
+	}else if (25 < bmi && bmi<= 28){
+	    alert(`BMI指数是${bmi}，过重`);
+	}else if (28 < bmi && bmi <= 32){
+	    alert(`BMI指数是${bmi}，肥胖`);
+	}else{
+	    alert(`BMI指数是${bmi}，严重肥胖`);
+	}
+
+	</script>
+</head>
+
+<body>
+
+</body>
+</html>

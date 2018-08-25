@@ -1,0 +1,12 @@
+API基础知识：
+	模板模式开发与API模式开发区别
+API的无状态性
+
+
+Restuful API：
+	Restful知识：
+		REST与SOPA、RPC的区别：
+			RPC所谓的远程调用（面向方法）
+			SOA所谓的面向服务的架构（面向消息）
+			REST所谓的Representational state transfer（面向资源）
+

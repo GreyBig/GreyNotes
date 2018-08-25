@@ -1,0 +1,30 @@
+验证码 是防止恶意破解密码、刷票、论坛灌水、刷页的手段。
+L2 3.2. 注册验证码
+
+以第三方扩展包 mews/captcha 作为基础来实现 Laravel 中的验证码功能。
+$ composer require "mews/captcha:~2.0"
+captcha 验证码
+
+运行以下命令生成配置文件 config/captcha.php：
+$  php artisan vendor:publish --provider='Mews\Captcha\CaptchaServiceProvider'
+
+此扩展包的使用分为两步：
+1、前端展示 —— 生成验证码给用户展示，并收集用户输入的答案；
+2、后端验证 —— 接收答案，检测用户输入的验证码是否正确。
+
+写入到前端页面代码
+
+后端验证：我们只需要在注册的时候，添加上表单验证规则即可
+app/Http/Controllers/Auth/RegisterController.php
+ protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+            'captcha' => 'required|captcha',
+        ], [
+            'captcha.required' => '验证码不能为空',
+            'captcha.captcha' => '请输入正确的验证码',
+        ]);
+    }

@@ -1,0 +1,5 @@
+www.hello.com/basic/requirements.php
+访问basic文件下的equirements.php可以检测当前系统环境能否运行
+
+在basic\config\web.php 中随便给cookieValidationKey一个值
+之后访问 入口脚本：www.hello.com/basic/web/index.php   

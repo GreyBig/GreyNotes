@@ -1,0 +1,45 @@
+console.log  作用：调式javascript
+
+'use strict'; 开启严格模式
+
+JavaScript的对象是动态类型，你可以自由地给一个对象添加或删除属性
+
+var xiaoming = {
+    name: '小明'
+};
+xiaoming.age; // undefined
+xiaoming.age = 18; // 新增一个age属性
+xiaoming.age; // 18
+delete xiaoming.age; // 删除age属性
+xiaoming.age; // undefined
+delete xiaoming['name']; // 删除name属性
+xiaoming.name; // undefined
+delete xiaoming.school; // 删除一个不存在的school属性也不会报错
+
+检测xiaoming是否拥有某一属性，可以用in操作符：
+'name' in xiaoming; // 返回true或false
+
+不过要小心，如果in判断一个属性存在，这个属性不一定是xiaoming的，它可能是xiaoming继承得到的
+要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：
+var xiaoming = {
+    name: '小明'
+};
+xiaoming.hasOwnProperty('name'); // true
+xiaoming.hasOwnProperty('toString'); // false
+
+
+JavaScript把null、undefined、0、NaN和空字符串''视为false，其他值一概视为true
+
+JavaScript的循环有两种，一种是for循环，通过初始条件、结束条件和递增条件来循环执行语句块
+
+Map和Set是ES6标准新增的数据类型，请根据浏览器的支持情况决定是否要使用。
+Map具有几块的查找速度 Set和Map类似，Set和Map类似，也是一组key的集合，但不存储value。key不能重复
+
+遍历Array可以采用下标循环，遍历Map和Set就无法使用下标。
+为了统一集合类型，ES6标准引入了新的iterable类型，Array、Map和Set都属于iterable类型。
+具有iterable类型的集合可以通过新的for ... of循环来遍历。
+for ... of循环是ES6引入的新的语法
+
+innerHTML在JS是双向功能：获取对象的内容  或  向对象插入内容；
+如：<div id="aa">这是内容</div>   ，我们可以通过  document.getElementById('aa').innerHTML 来获取id为aa的对象的内嵌内容；
+也可以对某对象插入内容，如  document.getElementById('abc').innerHTML='这是被插入的内容';   这样就能向id为abc的对象插入内容。
